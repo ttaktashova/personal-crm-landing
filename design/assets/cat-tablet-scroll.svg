@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="340" viewBox="0 0 300 340" role="img" aria-label="Черный кот с планшетом, из которого свисает бесконечный список">
+  <!-- Final CTA mascot: sits on the accent block, so the cross on the screen is ink, not accent.
+       The paper scroll reaches the bottom edge: place the SVG flush with the block's bottom.
+       Token map: cat #0E0A09, cat-eye #FFD23F, cat-pink #FF9EC6, cream #F6EEE3,
+       device #2E2826, paper #FFF6E0, paper-line #C4B8A8, paper-divider #E8DCC6,
+       device-camera #5A504C, ink #17110F -->
+  <path d="M224 286 C266 290 284 256 270 224 C264 210 276 200 286 210" fill="none" stroke="#0E0A09" stroke-width="18" stroke-linecap="round"/>
+  <path d="M88 182 C62 212 56 258 66 282 C72 296 96 298 112 292 L188 292 C204 298 228 296 234 282 C244 258 238 212 212 182 Z" fill="#0E0A09"/>
+  <path d="M58 100 L66 22 Q68 12 78 18 L120 56 Z" fill="#0E0A09" stroke="#0E0A09" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M242 100 L234 22 Q232 12 222 18 L180 56 Z" fill="#0E0A09" stroke="#0E0A09" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M50 120 C50 72 92 52 150 52 C208 52 250 72 250 120 C250 172 208 196 150 196 C92 196 50 172 50 120 Z" fill="#0E0A09"/>
+  <path d="M72 80 L76 38 L102 60 Z" fill="#FF9EC6"/>
+  <path d="M228 80 L224 38 L198 60 Z" fill="#FF9EC6"/>
+  <circle cx="112" cy="122" r="25" fill="#FFD23F"/>
+  <circle cx="188" cy="122" r="25" fill="#FFD23F"/>
+  <circle cx="121" cy="115" r="12" fill="#0E0A09"/>
+  <circle cx="197" cy="115" r="12" fill="#0E0A09"/>
+  <circle cx="125" cy="110" r="4.5" fill="#FFFFFF"/>
+  <circle cx="201" cy="110" r="4.5" fill="#FFFFFF"/>
+  <ellipse cx="86" cy="160" rx="13" ry="7" fill="#FF9EC6" opacity="0.35"/>
+  <ellipse cx="214" cy="160" rx="13" ry="7" fill="#FF9EC6" opacity="0.35"/>
+  <path d="M143 150 L157 150 L150 157 Z" fill="#FF9EC6" stroke="#FF9EC6" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M134 163 Q150 178 166 163" fill="none" stroke="#FF9EC6" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#F6EEE3" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M60 148 L22 140"/>
+    <path d="M62 160 L24 166"/>
+    <path d="M240 148 L278 140"/>
+    <path d="M238 160 L276 166"/>
+  </g>
+  <path d="M128 280 L172 280 L173 306 C174 320 166 330 158 338 L122 338 C130 328 128 318 128 306 Z" fill="#FFF6E0"/>
+  <g stroke="#C4B8A8" stroke-width="2.5" stroke-linecap="round">
+    <path d="M136 296 L162 296"/>
+    <path d="M136 308 L158 308"/>
+    <path d="M134 320 L160 320"/>
+  </g>
+  <rect x="88" y="192" width="124" height="96" rx="11" fill="#2E2826"/>
+  <rect x="95" y="199" width="110" height="82" rx="5" fill="#FFF6E0"/>
+  <circle cx="150" cy="195.5" r="1.6" fill="#5A504C"/>
+  <path d="M154 207 L154 273" stroke="#E8DCC6" stroke-width="1.5"/>
+  <g stroke="#C4B8A8" stroke-width="3" stroke-linecap="round">
+    <path d="M104 214 L140 214"/>
+    <path d="M104 227 L134 227"/>
+    <path d="M104 240 L140 240"/>
+    <path d="M104 253 L128 253"/>
+    <path d="M104 266 L136 266"/>
+    <path d="M164 250 L196 250"/>
+    <path d="M164 263 L188 263"/>
+  </g>
+  <path d="M171 216 L187 232 M187 216 L171 232" stroke="#17110F" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="90" cy="250" r="14" fill="#0E0A09"/>
+  <circle cx="210" cy="250" r="14" fill="#0E0A09"/>
+</svg>

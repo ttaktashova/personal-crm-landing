@@ -1,0 +1,124 @@
+/* src/styles/tokens.css — design tokens (Tailwind CSS 4 @theme) */
+@theme {
+  /* Brand */
+  --color-accent: #FF4A2E;          /* red: buttons, tape, disks, accents in titles */
+  --color-accent-hover: #FF6A50;    /* header button hover */
+  --color-ink: #17110F;             /* page background; text on red */
+  --color-cream: #F6EEE3;           /* main text; CTA offset shadow; speech bubble; phone screen */
+
+  /* Surfaces and lines on ink */
+  --color-surface: #221A17;         /* cards, floating chips */
+  --color-surface-raised: #2E2522;  /* notification inside a card */
+  --color-line: #2A211D;            /* section dividers */
+  --color-border: #3D322C;          /* card and chip borders */
+  --color-border-strong: #4A3F39;   /* pill borders */
+
+  /* Text on ink */
+  --color-text-body: #E6DDD1;       /* card text */
+  --color-text-muted: #C9BFB3;      /* subtitles, paragraphs */
+  --color-text-pill: #CFC5B9;       /* "личная CRM" pill */
+  --color-text-subtle: #B5AA9D;     /* chip second line, labels, "сейчас" */
+  --color-text-faint: #A39889;      /* note under the hero button */
+  --color-text-footer: #8E8377;     /* footer */
+
+  /* Text on accent */
+  --color-on-accent-muted: #3B140C; /* note in the final red block */
+
+  /* Phone mock (Solution) */
+  --color-phone: #0B0807;           /* phone body */
+  --color-screen-field: #E8DDCF;    /* search field */
+  --color-screen-divider: #E2D6C6;  /* row dividers */
+  --color-screen-muted: #665E55;    /* row second line, search placeholder (mockup had #6E655C, darkened for 4.5:1) */
+  --color-screen-icon: #9A8F84;     /* row chevrons */
+
+  /* Illustrations (inline SVG) */
+  --color-cat: #0E0A09;
+  --color-cat-eye: #FFD23F;
+  --color-cat-glint: #FFFFFF;       /* highlight in the cat's pupils */
+  --color-cat-pink: #FF9EC6;
+  --color-paper: #FFF6E0;
+  --color-paper-line: #C4B8A8;
+  --color-paper-divider: #E8DCC6;
+  --color-device: #2E2826;
+  --color-device-camera: #5A504C;
+
+  /* Fonts */
+  --font-display: "Dela Gothic One", "Golos Text", sans-serif;
+  --font-sans: "Golos Text", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* Fixed text sizes missing from Tailwind's default scale */
+  --text-micro: 0.625rem;        /* 10px */
+  --text-micro-lg: 0.6875rem;    /* 11px */
+  --text-caption: 0.8125rem;     /* 13px */
+  --text-ui: 0.9375rem;          /* 15px */
+  --text-lead: 1.0625rem;        /* 17px */
+  --text-body-lg: 1.1875rem;     /* 19px */
+  --text-title-sm: 1.375rem;     /* 22px */
+  --text-title-lg: 2.5rem;       /* 40px */
+  --text-title-xl: 2.75rem;      /* 44px */
+  --text-glyph-lg: 1.75rem;      /* 28px, "?" icon in the Problem card on desktop */
+
+  /* Tailwind sizes keep the font's own line height (no explicit leading in the mockup) */
+  --text-xs--line-height: normal;
+  --text-sm--line-height: normal;
+  --text-base--line-height: normal;
+  --text-lg--line-height: normal;
+  --text-xl--line-height: normal;
+  --text-2xl--line-height: normal;
+  --text-3xl--line-height: normal;
+
+  /* Fluid text sizes */
+  --text-hero: clamp(2.5rem, 13.3vw, 3.25rem);             /* 40–52px, h1 mobile */
+  --text-hero-lg: clamp(3rem, 6.2vw, 5.5rem);              /* 48–88px, h1 desktop */
+  --text-tape: clamp(1.375rem, 7.2vw, 1.75rem);            /* 22–28px, red tape mobile */
+  --text-tape-lg: clamp(1.625rem, 3vw, 2.5rem);            /* 26–40px, red tape desktop */
+  --text-title-md: clamp(1.75rem, 8.7vw, 2.125rem);        /* 28–34px, Solution title mobile */
+  --text-title-md-lg: clamp(2.125rem, 4.2vw, 3.75rem);     /* 34–60px, Solution title desktop */
+  --text-title-xl-lg: clamp(2.75rem, 5vw, 4.5rem);         /* 44–72px, Problem title desktop */
+  --text-title-lg-lg: clamp(2.5rem, 5vw, 4.5rem);          /* 40–72px, Benefits title desktop */
+  --text-final-lg: clamp(1.5rem, 2.8vw, 2.375rem);         /* 24–38px, final block text desktop */
+  --text-lead-lg: clamp(1.0625rem, 1.6vw, 1.375rem);       /* 17–22px, hero subtitle desktop */
+  --text-body-fluid-lg: clamp(1.0625rem, 1.45vw, 1.25rem); /* 17–20px, Solution paragraph desktop */
+
+  /* Line heights */
+  --leading-hero: 1.02;
+  --leading-title: 1.05;
+  --leading-title-md: 1.08;
+  --leading-tape: 1.1;
+  --leading-card-title: 1.15;
+  --leading-final: 1.2;
+  --leading-quote: 1.4;
+  --leading-body: 1.45;
+
+  /* Letter spacing */
+  --tracking-display: -0.01em;   /* h1 */
+  --tracking-label: 0.08em;      /* "Больше никаких" */
+
+  /* Spacing: default 4px step stays; fluid values for desktop blocks */
+  --spacing-section-lg: clamp(4.5rem, 9vw, 7.5rem);  /* 72–120px, section padding */
+  --spacing-hero-end-lg: clamp(4.5rem, 8vw, 6.5rem); /* 72–104px, below the hero */
+  --spacing-solution-end-lg: clamp(0rem, 4vw, 4rem); /* 0–64px, lifts Solution text above the cropped phone */
+  --spacing-final-y-lg: clamp(1.75rem, 4vw, 3.5rem); /* 28–56px, final red block: top, and below its text */
+  --spacing-final-x-lg: clamp(1.5rem, 5vw, 4.5rem);  /* 24–72px, final red block: sides */
+
+  /* Radii (12, 16, 24px and pills use default rounded-xl, rounded-2xl, rounded-3xl, rounded-full) */
+  --radius-field: 0.625rem;      /* 10px, search field in the phone mock */
+  --radius-chip: 0.875rem;       /* 14px, chips and icon tiles on desktop */
+  --radius-bubble: 1.125rem;     /* 18px */
+  --radius-card: 1.25rem;        /* 20px */
+  --radius-block: 1.75rem;       /* 28px */
+  --radius-block-lg: 2rem;       /* 32px */
+  --radius-phone: 2.375rem;      /* 38px */
+  --radius-phone-lg: 2.75rem;    /* 44px */
+  --radius-screen: 1.75rem;      /* 28px */
+  --radius-screen-lg: 2rem;      /* 32px */
+
+  /* Shadows */
+  --shadow-chip: 0 12px 28px rgb(0 0 0 / 0.55);
+  --shadow-chip-lg: 0 16px 36px rgb(0 0 0 / 0.55);
+  --shadow-cta: 4px 4px 0 var(--color-cream);
+  --shadow-cta-hover: 6px 6px 0 var(--color-cream);
+  --shadow-cta-lg: 5px 5px 0 var(--color-cream);
+  --shadow-cta-lg-hover: 7px 7px 0 var(--color-cream);
+}

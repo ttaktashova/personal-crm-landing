@@ -1,0 +1,15 @@
+---
+// Card in the "Знакомо?" block: accent icon tile (slot "icon") and text.
+---
+
+<li
+  class="flex items-start gap-4 rounded-card border border-border bg-surface p-5 lg:items-center lg:gap-5 lg:rounded-3xl lg:p-7"
+>
+  <div
+    aria-hidden="true"
+    class="flex size-11 flex-none items-center justify-center rounded-xl bg-accent text-ink lg:size-13 lg:rounded-chip"
+  >
+    <slot name="icon" />
+  </div>
+  <p class="text-base leading-body text-text-body lg:text-body-lg"><slot /></p>
+</li>

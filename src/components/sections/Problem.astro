@@ -1,0 +1,31 @@
+---
+import Icon from "../Icon.astro";
+import ProblemCard from "../ProblemCard.astro";
+import CatConfused from "../illustrations/CatConfused.astro";
+---
+
+<section aria-labelledby="problem-title" class="border-t border-line">
+  <div
+    class="page-container flex flex-col gap-3 pt-18 pb-16 lg:grid lg:grid-cols-[1fr_2fr] lg:items-center lg:gap-16 lg:py-section-lg"
+  >
+    <!-- Phones: title left, cat right. lg: cat above the title -->
+    <div class="mb-3 flex items-end justify-between lg:mb-0 lg:flex-col-reverse lg:items-start lg:gap-5">
+      <h2 id="problem-title" class="mb-1.5 font-display text-title-xl leading-none lg:mb-0 lg:text-title-xl-lg">
+        Знакомо?
+      </h2>
+      <CatConfused class="h-23 w-32.5 lg:h-32 lg:w-45" />
+    </div>
+
+    <ul class="flex flex-col gap-3 lg:gap-4">
+      <ProblemCard>
+        <span slot="icon" class="font-display text-2xl lg:text-glyph-lg">?</span>
+        Хочешь припомнить что-то кому-то в будущем, но вечно забываешь, на кого и из-за чего обиделся или почему тебя
+        кто-то бесит
+      </ProblemCard>
+      <ProblemCard>
+        <Icon slot="icon" name="notebook-lost" class="size-6 lg:size-7" />
+        Твои маленькие черные блокнотики слишком маленькие и все время теряются
+      </ProblemCard>
+    </ul>
+  </div>
+</section>

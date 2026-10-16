@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import Benefits from "../components/sections/Benefits.astro";
+import FinalCta from "../components/sections/FinalCta.astro";
+import Footer from "../components/sections/Footer.astro";
+import Header from "../components/sections/Header.astro";
+import Hero from "../components/sections/Hero.astro";
+import Problem from "../components/sections/Problem.astro";
+import Solution from "../components/sections/Solution.astro";
+
+const title = "Черный список — запомни всех!";
+const description = "Храни в одном месте всех, кто тебя раздражает";
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dela+Gothic+One&family=Golos+Text:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Hero />
+      <Problem />
+      <Solution />
+      <Benefits />
+      <FinalCta />
+    </main>
+    <Footer />
+  </body>
+</html>

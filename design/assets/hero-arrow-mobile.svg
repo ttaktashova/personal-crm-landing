@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="393" height="387" viewBox="0 0 393 387" aria-hidden="true">
+  <!-- Mobile hero: dotted arrow from the handwritten note to the tablet.
+       Covers the whole illustration box (393x387, aspect-ratio 393/387). Color: cream #F6EEE3 -->
+  <path d="M58 140 C34 212 67.5 290 143.5 322" fill="none" stroke="#F6EEE3" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 7"/>
+  <path d="M135.1 310.8 L143.5 322 L129.5 323.7" fill="none" stroke="#F6EEE3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

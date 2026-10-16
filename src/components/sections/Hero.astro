@@ -1,0 +1,115 @@
+---
+import Chip from "../Chip.astro";
+import CtaButton from "../CtaButton.astro";
+import CatTablet from "../illustrations/CatTablet.astro";
+---
+
+<!--
+  Phones: one column in DOM order (title, subtitle, illustration, button, note).
+  lg: the illustration takes the right column; the text items stack in the left one,
+  centered vertically by the flexible first and last rows.
+-->
+<section
+  aria-labelledby="hero-title"
+  class="page-container pb-7 lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_auto_auto_auto_auto_1fr] lg:gap-x-16 lg:pt-10 lg:pb-hero-end-lg"
+>
+  <h1
+    id="hero-title"
+    class="mt-5.5 font-display text-hero leading-hero tracking-display lg:col-start-1 lg:row-start-2 lg:mt-0 lg:text-hero-lg"
+  >
+    <span class="block">Черный</span>{" "}
+    <span class="block">список —</span>{" "}
+    <span
+      class="mt-3 block w-fit -rotate-3 bg-accent px-4 pt-2 pb-2.5 text-tape leading-tape tracking-normal text-ink lg:mt-5 lg:px-5.5 lg:pt-2.5 lg:pb-3 lg:text-tape-lg"
+      >запомни всех!</span
+    >
+  </h1>
+
+  <p
+    class="mt-4.5 max-w-72.5 text-lead leading-body text-text-muted lg:col-start-1 lg:row-start-3 lg:mt-8 lg:max-w-115 lg:text-lead-lg"
+  >
+    Храни в одном месте всех, кто тебя раздражает
+  </p>
+
+  <!-- Illustration: every detail is placed in percent of this box, so the scene scales as a whole -->
+  <div
+    class="relative -mx-6 aspect-[393/387] lg:col-start-2 lg:row-span-full lg:mx-0 lg:aspect-[560/600] lg:w-full lg:max-w-140 lg:self-center lg:justify-self-center"
+  >
+    <div
+      aria-hidden="true"
+      class="absolute top-[36.69%] left-[22.01%] aspect-square w-[55.98%] rounded-full bg-accent lg:top-[35%] lg:left-[19.64%] lg:w-[60.71%]"
+    >
+    </div>
+
+    <svg viewBox="0 0 393 387" class="absolute inset-0 size-full lg:hidden" aria-hidden="true">
+      <path
+        d="M58 140 C34 212 67.5 290 143.5 322"
+        fill="none"
+        class="stroke-cream"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-dasharray="1 7"></path>
+      <path
+        d="M135.1 310.8 L143.5 322 L129.5 323.7"
+        fill="none"
+        class="stroke-cream"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+    <svg viewBox="0 0 560 600" class="absolute inset-0 hidden size-full lg:block" aria-hidden="true">
+      <path
+        d="M70 244 C40 340 90 450 196 492"
+        fill="none"
+        class="stroke-cream"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-dasharray="1 9"></path>
+      <path
+        d="M186.1 479.5 L196 492 L180.2 494.3"
+        fill="none"
+        class="stroke-cream"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+
+    <CatTablet class="absolute bottom-0 left-[20.74%] aspect-square w-[58.52%] lg:left-[17.86%] lg:w-[64.29%]" />
+
+    <ul aria-label="Примеры записей">
+      <Chip
+        number="01"
+        name="Коля"
+        reason="не вернул зарядку"
+        class="top-[2.07%] left-[4.07%] -rotate-5 lg:top-[9%] lg:left-0"
+      />
+      <Chip
+        number="02"
+        name="Сосед сверху"
+        reason="дрель в 8:00, суббота"
+        class="top-[5.68%] right-[3.56%] rotate-4 lg:top-[2%] lg:right-0"
+      />
+      <Chip
+        number="03"
+        name="Начальник"
+        reason="«это срочно» в 18:55"
+        class="top-[25.84%] right-[3.05%] -rotate-3 lg:top-[29%] lg:right-[1%]"
+      />
+    </ul>
+
+    <p
+      class="absolute top-[21.19%] left-[4.58%] -rotate-6 font-hand text-2xl leading-none font-semibold lg:top-[27%] lg:left-[1%] lg:text-3xl"
+    >
+      <span class="block">как черный блокнотик,</span>{" "}
+      <span class="block">только не теряется</span>
+    </p>
+  </div>
+
+  <CtaButton class="mt-4 lg:col-start-1 lg:row-start-4 lg:mt-9 lg:justify-self-start" />
+
+  <p
+    class="mt-3.5 text-center text-caption text-text-faint lg:col-start-1 lg:row-start-5 lg:mt-4.5 lg:text-left lg:text-sm"
+  >
+    С любого устройства — в любое время
+  </p>
+</section>

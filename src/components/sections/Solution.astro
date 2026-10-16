@@ -1,0 +1,46 @@
+---
+import FeaturePill from "../FeaturePill.astro";
+import PhoneMock from "../PhoneMock.astro";
+import CatPeek from "../illustrations/CatPeek.astro";
+
+const rows = [
+  { initial: "Т", name: "Таксист", reason: "включил шансон на всю", highlight: true },
+  { initial: "Л", name: "Подруга Лена", reason: "проспойлерила финал" },
+  { initial: "С", name: "Сосед по парковке", reason: "встал в два ряда" },
+  { initial: "Б", name: "Бывшая коллега", reason: "«ой, я забыла»" },
+];
+---
+
+<!-- No bottom padding: the phone is cut off by the next section's divider on purpose -->
+<section aria-labelledby="solution-title" class="border-t border-line">
+  <div class="page-container pt-18 lg:grid lg:grid-cols-2 lg:gap-16 lg:pt-section-lg">
+    <div class="lg:self-center lg:pb-solution-end-lg">
+      <h2 id="solution-title" class="font-display text-title-md leading-title-md lg:text-title-md-lg">
+        <span class="block">Можешь больше</span>{" "}
+        <span class="block">не <span class="text-accent">переживать</span></span>
+      </h2>
+      <p
+        class="mt-4.5 text-lead leading-body text-text-muted lg:mt-6 lg:max-w-135 lg:text-body-fluid-lg lg:leading-normal"
+      >
+        Теперь доступ к твоему личному черному списку возможен в любое время, в любом месте, с любого устройства —
+        нужно всего лишь зайти в наше приложение.
+      </p>
+      <ul class="mt-5 flex flex-wrap gap-2 lg:mt-8 lg:gap-2.5">
+        <FeaturePill icon="clock" label="в любое время" />
+        <FeaturePill icon="pin" label="в любом месте" />
+        <FeaturePill icon="devices" label="с любого устройства" />
+      </ul>
+    </div>
+
+    <!-- Fixed-size scene, centered; on narrow phones it overflows both sides evenly.
+         The disk, the phone and the cat are centered in it horizontally. -->
+    <div class="mt-8 flex justify-center lg:mt-0 lg:self-end">
+      <div class="relative h-125 w-98.25 flex-none lg:h-147.5 lg:w-115 lg:max-w-full">
+        <div aria-hidden="true" class="absolute top-0 left-1/2 size-70 -translate-x-1/2 rounded-full bg-accent lg:size-82.5">
+        </div>
+        <PhoneMock rows={rows} class="absolute top-24 left-1/2 h-101 w-65 -translate-x-1/2 lg:top-30 lg:h-117.5 lg:w-75" />
+        <CatPeek class="absolute top-0 left-1/2 h-26 w-40 -translate-x-1/2 lg:top-2.5 lg:h-30 lg:w-46" />
+      </div>
+    </div>
+  </div>
+</section>

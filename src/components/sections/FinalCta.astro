@@ -1,0 +1,20 @@
+---
+import CtaButton from "../CtaButton.astro";
+import CatTabletScroll from "../illustrations/CatTabletScroll.astro";
+---
+
+<section aria-labelledby="final-text" class="page-container pt-6 pb-12 lg:pt-10 lg:pb-section-lg">
+  <div
+    class="flex flex-col items-center rounded-block bg-accent px-6 pt-6 pb-7 text-center text-ink lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-14 lg:overflow-hidden lg:rounded-block-lg lg:px-final-x-lg lg:pt-final-y-lg lg:pb-0 lg:text-left"
+  >
+    <!-- lg: the cat stands on the block's bottom edge, the hanging list touches it -->
+    <CatTabletScroll class="h-56.75 w-50 lg:h-85 lg:w-75 lg:self-end" />
+    <div class="self-stretch lg:pb-final-y-lg">
+      <p id="final-text" class="mt-4 font-display text-title-sm leading-final lg:mt-0 lg:max-w-160 lg:text-final-lg">
+        Устанавливай прямо сейчас и наслаждайся своим бесконечным списочком, который никуда не денется!
+      </p>
+      <CtaButton variant="dark" class="mt-6 lg:mt-8" />
+      <p class="mt-3.5 text-caption text-on-accent-muted lg:mt-4.5 lg:text-sm">С любого устройства — в любое время</p>
+    </div>
+  </div>
+</section>

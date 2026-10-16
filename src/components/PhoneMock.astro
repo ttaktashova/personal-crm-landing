@@ -1,0 +1,68 @@
+---
+import Icon from "./Icon.astro";
+
+// Phone with the app's list in the Solution block. It is a picture, not an interface:
+// screen readers get one label, the content inside is presentational.
+interface Row {
+  initial: string;
+  name: string;
+  reason: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  rows: Row[];
+  class?: string;
+}
+
+const { rows, class: className } = Astro.props;
+---
+
+<div
+  role="img"
+  aria-label="Экран приложения: список людей и за что они в нём"
+  class:list={[
+    "rounded-t-phone border border-b-0 border-border bg-phone px-2.5 pt-2.5",
+    "lg:rounded-t-phone-lg lg:px-3 lg:pt-3",
+    className,
+  ]}
+>
+  <div
+    class="flex h-full flex-col gap-3 overflow-hidden rounded-t-screen bg-cream px-4 pt-5.5 text-ink lg:gap-3.5 lg:rounded-t-screen-lg lg:px-4.5 lg:pt-6.5"
+  >
+    <div class="flex items-center justify-between">
+      <span class="font-display text-base lg:text-lg">Мой список</span>
+      <span
+        class="flex size-7.5 items-center justify-center rounded-full bg-accent text-xl leading-none font-semibold lg:size-8.5 lg:text-title-sm"
+        >+</span
+      >
+    </div>
+    <div
+      class="flex h-8.5 flex-none items-center gap-2 rounded-field bg-screen-field px-3 text-caption text-screen-muted lg:h-9.5 lg:text-sm"
+    >
+      <Icon name="search" class="size-3.5" />
+      Найти, кто бесит
+    </div>
+    <div class="flex flex-col">
+      {
+        rows.map((row) => (
+          <div class="flex items-center gap-3 border-b border-screen-divider py-2.5 last:border-b-0 lg:py-3">
+            <span
+              class:list={[
+                "flex size-9 flex-none items-center justify-center rounded-full font-display text-sm lg:size-10 lg:text-ui",
+                row.highlight ? "bg-accent text-ink" : "bg-ink text-cream",
+              ]}
+            >
+              {row.initial}
+            </span>
+            <span class="flex min-w-0 flex-1 flex-col gap-0.5">
+              <span class="text-sm font-semibold lg:text-ui">{row.name}</span>
+              <span class="text-xs text-screen-muted lg:text-caption">{row.reason}</span>
+            </span>
+            <Icon name="chevron-right" class="h-3 w-2 text-screen-icon" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

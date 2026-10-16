@@ -1,0 +1,76 @@
+---
+// Hero mascot: black cat holding a tablet with a list (design/assets/cat-tablet.svg).
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg viewBox="0 0 300 300" class={className} role="img" aria-label="Черный кот держит планшет со списком">
+  <path
+    d="M224 286 C266 290 284 256 270 224 C264 210 276 200 286 210"
+    fill="none"
+    class="stroke-cat"
+    stroke-width="18"
+    stroke-linecap="round"></path>
+  <path
+    d="M88 182 C62 212 56 258 66 282 C72 296 96 298 112 292 L188 292 C204 298 228 296 234 282 C244 258 238 212 212 182 Z"
+    class="fill-cat"></path>
+  <path
+    d="M58 100 L66 22 Q68 12 78 18 L120 56 Z"
+    class="fill-cat stroke-cat"
+    stroke-width="6"
+    stroke-linejoin="round"></path>
+  <path
+    d="M242 100 L234 22 Q232 12 222 18 L180 56 Z"
+    class="fill-cat stroke-cat"
+    stroke-width="6"
+    stroke-linejoin="round"></path>
+  <path
+    d="M50 120 C50 72 92 52 150 52 C208 52 250 72 250 120 C250 172 208 196 150 196 C92 196 50 172 50 120 Z"
+    class="fill-cat"></path>
+  <path d="M72 80 L76 38 L102 60 Z" class="fill-cat-pink"></path>
+  <path d="M228 80 L224 38 L198 60 Z" class="fill-cat-pink"></path>
+  <circle cx="112" cy="122" r="25" class="fill-cat-eye"></circle>
+  <circle cx="188" cy="122" r="25" class="fill-cat-eye"></circle>
+  <circle cx="121" cy="115" r="12" class="fill-cat"></circle>
+  <circle cx="197" cy="115" r="12" class="fill-cat"></circle>
+  <circle cx="125" cy="110" r="4.5" class="fill-cat-glint"></circle>
+  <circle cx="201" cy="110" r="4.5" class="fill-cat-glint"></circle>
+  <ellipse cx="86" cy="160" rx="13" ry="7" class="fill-cat-pink" opacity="0.35"></ellipse>
+  <ellipse cx="214" cy="160" rx="13" ry="7" class="fill-cat-pink" opacity="0.35"></ellipse>
+  <path
+    d="M143 150 L157 150 L150 157 Z"
+    class="fill-cat-pink stroke-cat-pink"
+    stroke-width="3"
+    stroke-linejoin="round"></path>
+  <path
+    d="M136 164 Q143 171 150 164 Q157 171 164 164"
+    fill="none"
+    class="stroke-cat-pink"
+    stroke-width="3"
+    stroke-linecap="round"></path>
+  <g class="stroke-cream" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+    <path d="M60 148 L22 140"></path>
+    <path d="M62 160 L24 166"></path>
+    <path d="M240 148 L278 140"></path>
+    <path d="M238 160 L276 166"></path>
+  </g>
+  <rect x="88" y="192" width="124" height="96" rx="11" class="fill-device"></rect>
+  <rect x="95" y="199" width="110" height="82" rx="5" class="fill-paper"></rect>
+  <circle cx="150" cy="195.5" r="1.6" class="fill-device-camera"></circle>
+  <path d="M154 207 L154 273" class="stroke-paper-divider" stroke-width="1.5"></path>
+  <g class="stroke-paper-line" stroke-width="3" stroke-linecap="round">
+    <path d="M104 214 L140 214"></path>
+    <path d="M104 227 L134 227"></path>
+    <path d="M104 240 L140 240"></path>
+    <path d="M104 253 L128 253"></path>
+    <path d="M104 266 L136 266"></path>
+    <path d="M164 250 L196 250"></path>
+    <path d="M164 263 L188 263"></path>
+  </g>
+  <path d="M171 216 L187 232 M187 216 L171 232" class="stroke-accent" stroke-width="4" stroke-linecap="round"></path>
+  <circle cx="90" cy="250" r="14" class="fill-cat"></circle>
+  <circle cx="210" cy="250" r="14" class="fill-cat"></circle>
+</svg>

@@ -1,0 +1,49 @@
+---
+// Icons from design/assets/icons.svg. Each one paints with currentColor,
+// so its color comes from the text color of the class passed in.
+const icons = {
+  "arrow-right": {
+    viewBox: "0 0 20 20",
+    body: '<path d="M3 10 H17 M11 4 L17 10 L11 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  clock: {
+    viewBox: "0 0 16 16",
+    body: '<circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  pin: {
+    viewBox: "0 0 16 16",
+    body: '<path d="M8 15 C8 15 3 10 3 6.5 A5 5 0 0 1 13 6.5 C13 10 8 15 8 15 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.8" fill="currentColor"/>',
+  },
+  // The small phone is filled with the page background so it hides the laptop line behind it
+  devices: {
+    viewBox: "0 0 16 16",
+    body: '<rect x="1.5" y="3" width="10" height="7.5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M0.8 12.6 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="10.5" y="6" width="5" height="8.5" rx="1.2" class="fill-ink" stroke="currentColor" stroke-width="1.6"/>',
+  },
+  "notebook-lost": {
+    viewBox: "0 0 24 24",
+    body: '<rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="3 2.5"/><path d="M9 3 V21" stroke="currentColor" stroke-width="2.2"/>',
+  },
+  bell: {
+    viewBox: "0 0 24 24",
+    body: '<path d="M6 16 V11 A6 6 0 0 1 18 11 V16 L20 18 H4 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 20.5 A2 2 0 0 0 14 20.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+  },
+  search: {
+    viewBox: "0 0 14 14",
+    body: '<circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 9.5 L12.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  },
+  "chevron-right": {
+    viewBox: "0 0 8 12",
+    body: '<path d="M2 2 L6 6 L2 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+};
+
+interface Props {
+  name: keyof typeof icons;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props;
+const icon = icons[name];
+---
+
+<svg viewBox={icon.viewBox} class:list={["flex-none", className]} aria-hidden="true" set:html={icon.body} />

@@ -1,0 +1,17 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  icon: "clock" | "pin" | "devices";
+  label: string;
+}
+
+const { icon, label } = Astro.props;
+---
+
+<li
+  class="inline-flex h-10 items-center gap-2 rounded-full border border-border-strong px-3.5 text-sm font-medium lg:h-11 lg:px-4 lg:text-ui"
+>
+  <Icon name={icon} class="size-4 text-accent" />
+  {label}
+</li>

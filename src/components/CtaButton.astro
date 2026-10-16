@@ -1,0 +1,44 @@
+---
+import { APP_URL } from "../config";
+import Icon from "./Icon.astro";
+
+interface Props {
+  variant?: "accent" | "dark";
+  // sm: compact header button without a shadow.
+  // lg: 60px and full width on phones, 64px and as wide as its text from lg.
+  size?: "sm" | "lg";
+  class?: string;
+}
+
+const { variant = "accent", size = "lg", class: className } = Astro.props;
+
+const sizes = {
+  sm: "inline-flex h-11 gap-2.5 rounded-xl px-5 text-sm hover:bg-accent-hover",
+  lg: [
+    "flex h-15 w-full gap-3 rounded-2xl text-lead shadow-cta",
+    "hover:shadow-cta-hover motion-safe:hover:-translate-0.5",
+    "active:shadow-none motion-safe:active:translate-1",
+    "lg:inline-flex lg:h-16 lg:w-auto lg:gap-3.5 lg:px-8 lg:text-lg lg:shadow-cta-lg",
+    "lg:hover:shadow-cta-lg-hover lg:active:shadow-none lg:motion-safe:active:translate-1.25",
+  ],
+};
+
+const variants = {
+  accent: "bg-accent text-ink focus-visible:outline-cream",
+  dark: "bg-ink text-cream focus-visible:outline-ink",
+};
+---
+
+<a
+  href={APP_URL}
+  class:list={[
+    "items-center justify-center font-display transition-[translate,box-shadow,background-color] duration-150 ease-out",
+    "focus-visible:outline-3 focus-visible:outline-offset-3",
+    sizes[size],
+    variants[variant],
+    className,
+  ]}
+>
+  <span>Перейти в приложение</span>
+  <Icon name="arrow-right" class={size === "sm" ? "size-4" : "size-5"} />
+</a>

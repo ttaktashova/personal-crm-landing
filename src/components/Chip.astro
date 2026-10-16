@@ -1,0 +1,25 @@
+---
+// Floating list entry over the hero illustration. Position and rotation come in through `class`.
+interface Props {
+  number: string;
+  name: string;
+  reason: string;
+  class?: string;
+}
+
+const { number, name, reason, class: className } = Astro.props;
+---
+
+<li
+  class:list={[
+    "absolute flex flex-col gap-0.75 rounded-chip border border-border bg-surface px-3.5 py-2.5 shadow-chip",
+    "lg:gap-1 lg:rounded-2xl lg:px-4.5 lg:py-3 lg:shadow-chip-lg",
+    className,
+  ]}
+>
+  <span class="flex items-baseline gap-2 lg:gap-2.5">
+    <span class="font-display text-micro text-accent lg:text-micro-lg">#{number}</span>{" "}
+    <span class="text-sm font-semibold lg:text-base">{name}</span>
+  </span>{" "}
+  <span class="text-xs text-text-subtle lg:text-sm">{reason}</span>
+</li>

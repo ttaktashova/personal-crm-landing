@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@layer base {
+  /* Rotated chips, the tape and the phone scene (wider than a 320px screen) must not cause
+     horizontal scrolling. Clipping on html too keeps body's own clip from moving to the viewport,
+     where mobile browsers would still widen the page to fit the overflow. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    /* Text without an explicit leading uses the font's own line height, as in the mockup */
+    line-height: normal;
+  }
+}
+
+/* Page column: full width with 24px sides on phones, at most 576px on tablets,
+   at most 1280px with 40px sides from lg. Backgrounds and dividers stay full width. */
+@utility page-container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: --spacing(6);
+
+  @variant lg {
+    max-width: var(--container-7xl);
+    padding-inline: --spacing(10);
+  }
+}

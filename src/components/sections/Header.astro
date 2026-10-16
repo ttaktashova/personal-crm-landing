@@ -1,0 +1,19 @@
+---
+import CtaButton from "../CtaButton.astro";
+import Logo from "../Logo.astro";
+---
+
+<header class="page-container flex h-16 items-center pt-5 lg:h-auto lg:py-6">
+  <div class="flex items-center gap-2.5 lg:gap-3">
+    <Logo class="size-8 lg:size-9" />
+    <span class="font-display text-ui whitespace-nowrap lg:text-lg">черный список</span>
+  </div>{" "}
+  <span
+    class="ml-auto rounded-full border border-border-strong px-3 py-1.5 text-xs font-medium whitespace-nowrap text-text-pill lg:ml-4 lg:text-caption"
+    >личная CRM</span
+  >
+  <!-- On phones the hero button is visible right away, so the header has none -->
+  <div class="ml-auto hidden lg:block">
+    <CtaButton size="sm" />
+  </div>
+</header>

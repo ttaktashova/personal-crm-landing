@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <!-- Icon set. Every icon is monochrome and uses currentColor, so color comes from the CSS text color.
+       Use inline (e.g. as small Astro components); each <symbol> keeps its original viewBox.
+       Render sizes from the mockup are noted per icon. -->
+
+  <!-- Arrow on CTA buttons. 20x20 (header button: 16x16) -->
+  <symbol id="icon-arrow-right" viewBox="0 0 20 20">
+    <path d="M3 10 H17 M11 4 L17 10 L11 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Solution pills. 16x16, accent color -->
+  <symbol id="icon-clock" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-pin" viewBox="0 0 16 16">
+    <path d="M8 15 C8 15 3 10 3 6.5 A5 5 0 0 1 13 6.5 C13 10 8 15 8 15 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="8" cy="6.5" r="1.8" fill="currentColor"/>
+  </symbol>
+  <!-- The small phone is filled with the page background (ink #17110F) so it hides the laptop line behind it -->
+  <symbol id="icon-devices" viewBox="0 0 16 16">
+    <rect x="1.5" y="3" width="10" height="7.5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M0.8 12.6 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="10.5" y="6" width="5" height="8.5" rx="1.2" fill="#17110F" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+
+  <!-- Problem card 2: lost notebook (dashed outline). 24x24 mobile, 28x28 desktop, ink on accent tile -->
+  <symbol id="icon-notebook-lost" viewBox="0 0 24 24">
+    <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="3 2.5"/>
+    <path d="M9 3 V21" stroke="currentColor" stroke-width="2.2"/>
+  </symbol>
+
+  <!-- Benefits card 2: reminder bell. 22x22 mobile, 26x26 desktop, ink on accent tile -->
+  <symbol id="icon-bell" viewBox="0 0 24 24">
+    <path d="M6 16 V11 A6 6 0 0 1 18 11 V16 L20 18 H4 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M10 20.5 A2 2 0 0 0 14 20.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Phone mock: search field. 14x14 -->
+  <symbol id="icon-search" viewBox="0 0 14 14">
+    <circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M9.5 9.5 L12.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Phone mock: row chevron. 8x12 -->
+  <symbol id="icon-chevron-right" viewBox="0 0 8 12">
+    <path d="M2 2 L6 6 L2 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>

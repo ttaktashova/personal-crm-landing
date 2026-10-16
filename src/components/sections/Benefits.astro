@@ -1,0 +1,66 @@
+---
+import Icon from "../Icon.astro";
+import Logo from "../Logo.astro";
+---
+
+<section aria-labelledby="benefits-title" class="border-t border-line">
+  <div
+    class="page-container flex flex-col gap-4 py-18 lg:grid lg:grid-cols-[1fr_2fr] lg:items-start lg:gap-16 lg:py-section-lg"
+  >
+    <h2 id="benefits-title" class="mb-2 font-display text-title-lg leading-title lg:mb-0 lg:text-title-lg-lg">
+      <span class="block">Зашел —</span>{" "}
+      <span class="block">увидел —</span>{" "}
+      <span class="block text-accent">отомстил</span>
+    </h2>
+
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-3.5 rounded-card border border-border bg-surface p-5 lg:gap-4 lg:rounded-3xl lg:p-7">
+        <p class="text-caption font-semibold tracking-label text-text-subtle uppercase lg:text-sm">Больше никаких</p>
+        <div
+          class="relative rounded-2xl bg-cream px-4 py-3.5 text-base leading-quote text-ink lg:rounded-bubble lg:px-5.5 lg:py-4.5 lg:text-lg lg:leading-body"
+        >
+          <s class="decoration-accent decoration-2"
+            >«Вот я помню, что он меня чем-то разозлил, и я что-то хотел ему припомнить... Но что...»</s
+          >
+          <!-- Speech bubble tail -->
+          <span
+            aria-hidden="true"
+            class="absolute -bottom-1.5 left-6.5 size-3.5 rotate-45 bg-cream lg:-bottom-1.75 lg:left-8 lg:size-4"
+          ></span>
+        </div>
+      </div>
+
+      <!-- lg: title and notification sit side by side and wrap when there is not enough room -->
+      <div
+        class="flex flex-col gap-4 rounded-card border border-border bg-surface p-5 lg:flex-row lg:flex-wrap lg:items-center lg:gap-x-6 lg:gap-y-5 lg:rounded-3xl lg:p-7"
+      >
+        <div class="flex items-center gap-3.5 lg:grow lg:basis-65 lg:gap-4">
+          <div
+            aria-hidden="true"
+            class="flex size-11 flex-none items-center justify-center rounded-xl bg-accent text-ink lg:size-13 lg:rounded-chip"
+          >
+            <Icon name="bell" class="size-5.5 lg:size-6.5" />
+          </div>
+          <div class="flex flex-col gap-1.5 lg:gap-2">
+            <h3 class="font-display text-lg leading-card-title lg:text-title-sm">Напоминалка отомстить</h3>
+            <p
+              class="self-start rounded-full border border-accent px-2.5 py-0.75 text-xs font-medium text-accent lg:text-caption"
+            >
+              в следующих версиях
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-1.5 rounded-2xl bg-surface-raised px-3.5 py-3 lg:grow lg:basis-78 lg:px-4 lg:py-3.5"
+        >
+          <div class="flex items-center gap-2 text-xs text-text-subtle lg:text-caption">
+            <Logo eyes={false} class="size-4.5" />
+            <span class="font-semibold text-cream">Черный список</span>{" "}
+            <span class="ml-auto">сейчас</span>
+          </div>
+          <p class="text-sm leading-quote lg:text-ui">Пора отомстить: Дима — занял 500&nbsp;₽ и пропал</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

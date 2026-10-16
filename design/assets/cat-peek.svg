@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="104" viewBox="0 0 160 104" role="img" aria-label="Черный кот выглядывает из-за телефона и читает список">
+  <!-- Solution section: cat peeking over the phone's top edge.
+       Align so that y=96 of this SVG sits exactly on the phone's top edge (paws overlap the bezel by 8 units).
+       Rendered at 160x104 on mobile and 184x120 on desktop.
+       Token map: cat #0E0A09, cat-eye #FFD23F, cat-pink #FF9EC6, cream #F6EEE3 -->
+  <path d="M26 66 L32 12 Q33 5 40 9 L64 34 Z" fill="#0E0A09" stroke="#0E0A09" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M134 66 L128 12 Q127 5 120 9 L96 34 Z" fill="#0E0A09" stroke="#0E0A09" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M20 97 C18 56 44 30 80 30 C116 30 142 56 140 97 Z" fill="#0E0A09"/>
+  <path d="M34 52 L37 22 L54 38 Z" fill="#FF9EC6"/>
+  <path d="M126 52 L123 22 L106 38 Z" fill="#FF9EC6"/>
+  <circle cx="60" cy="64" r="12" fill="#FFD23F"/>
+  <circle cx="100" cy="64" r="12" fill="#FFD23F"/>
+  <circle cx="62" cy="69" r="6" fill="#0E0A09"/>
+  <circle cx="102" cy="69" r="6" fill="#0E0A09"/>
+  <circle cx="64" cy="66.5" r="2.2" fill="#FFFFFF"/>
+  <circle cx="104" cy="66.5" r="2.2" fill="#FFFFFF"/>
+  <path d="M76 80 L84 80 L80 84.5 Z" fill="#FF9EC6" stroke="#FF9EC6" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M73 88 Q76.5 91.5 80 88 Q83.5 91.5 87 88" fill="none" stroke="#FF9EC6" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="#F6EEE3" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
+    <path d="M30 80 L4 76"/>
+    <path d="M30 86 L6 90"/>
+    <path d="M130 80 L156 76"/>
+    <path d="M130 86 L154 90"/>
+  </g>
+  <ellipse cx="48" cy="97" rx="16" ry="8" fill="#0E0A09"/>
+  <ellipse cx="112" cy="97" rx="16" ry="8" fill="#0E0A09"/>
+</svg>
