@@ -65,7 +65,8 @@ jobs:
       # so the target path is relative to that folder. New files land before
       # old ones are deleted, so visitors never get a page without its styles.
       - name: Upload to the server
-        run: rsync -rlptz --delete-after --chmod=D755,F644 --itemize-changes dist/ server:
+        run: |
+          rsync -rlptz --delete-after --chmod=D755,F644 --itemize-changes dist/ server:
 
       - name: Check the live site
         run: |
