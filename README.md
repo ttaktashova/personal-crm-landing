@@ -13,6 +13,18 @@ pnpm build       # собрать готовый сайт в папку dist/
 pnpm preview     # открыть собранный сайт: http://localhost:4321
 ```
 
+## Как выкатить новую версию
+
+Отправить изменения в ветку `main` (`git push`) — дальше всё само, примерно за минуту:
+
+1. GitHub Actions собирает сайт (`.github/workflows/deploy.yml`)
+2. выкладывает его на сервер в папку `/var/www/landing`, лишние старые файлы удаляет
+3. проверяет, что https://testblacklist.site отвечает и показывает именно эту версию
+
+Получилось или нет — на вкладке **Actions** в GitHub: зелёная галочка или красный крестик. Какая версия сейчас на сайте — https://testblacklist.site/version.txt (номер коммита).
+
+Ключ для сервера лежит в секрете `DEPLOY_SSH_KEY`, адрес сервера — в переменных `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KNOWN_HOSTS` (Settings → Secrets and variables → Actions). На сервере этот ключ умеет только загружать файлы в папку лендинга.
+
 ## Где что лежит
 
 - `src/config.ts` — адрес приложения для кнопок
