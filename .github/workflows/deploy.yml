@@ -1,0 +1,77 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+# One deploy at a time; a newer push waits for the running one to finish
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  SITE_URL: https://testblacklist.site
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      # pnpm version comes from "packageManager" in package.json
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      # Shows which commit is live: $SITE_URL/version.txt
+      - name: Stamp the build with its commit
+        run: printf '%s\n' "$GITHUB_SHA" >dist/version.txt
+
+      - name: Set up SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" >~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" >~/.ssh/known_hosts
+          cat >~/.ssh/config <<EOF
+          Host server
+            HostName $DEPLOY_HOST
+            User $DEPLOY_USER
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking yes
+          EOF
+
+      # On the server this key may only rsync into the landing folder (rrsync),
+      # so the target path is relative to that folder. New files land before
+      # old ones are deleted, so visitors never get a page without its styles.
+      - name: Upload to the server
+        run: rsync -rlptz --delete-after --chmod=D755,F644 --itemize-changes dist/ server:
+
+      - name: Check the live site
+        run: |
+          code=$(curl -sS -o /dev/null -w '%{http_code}' "$SITE_URL/")
+          echo "Home page: HTTP $code"
+          test "$code" = 200
+          live=$(curl -fsS "$SITE_URL/version.txt")
+          echo "Live version: $live (expected $GITHUB_SHA)"
+          test "$live" = "$GITHUB_SHA"
